@@ -9,8 +9,7 @@ export default function Home() {
         alt="the fresh logo: a sliced lemon dripping with juice"
       />
       <p class="my-6">
-        Welcome to Victor's `fresh` example app. Try updating this message in
-        the ./routes/index.tsx file, and refresh.
+        Hello, worlds!
       </p>
       <Counter start={3} />
     </div>
