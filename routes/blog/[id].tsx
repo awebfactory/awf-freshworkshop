@@ -1,14 +1,18 @@
-import { Post } from "../../utils/posts.ts";
+import { loadPost, Post } from "../../utils/posts.ts";
+import { Handlers, PageProps } from "$fresh/server.ts";
 
-const post: Post = {
-  id: "eat-and-sleep",
-  title: "Eat and Sleep",
-  publishAt: new Date("2020-01-01"),
-  snippet: "The second post.",
-  content: "Eat and sleep is...",
+export const handler: Handlers<Post> = {
+  async GET(_req, ctx) {
+    const post = await loadPost(ctx.params.id);
+    if (!post) {
+      return new Response("Post not found", { status: 404 });
+    }
+    return ctx.render(post);
+  },
 };
 
-export default function PostPage() {
+export default function PostPage(props: PageProps<Post>) {
+  const post = props.data;
   return (
     <div class="px-4 mx-auto max-w-screen-md">
       <p class="text-gray-600 mt-12">
