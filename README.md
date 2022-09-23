@@ -10,7 +10,7 @@
 
 Start the project:
 
-```
+```deno
 deno task start
 ```
 
