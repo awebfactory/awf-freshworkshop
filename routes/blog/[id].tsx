@@ -13,12 +13,14 @@ export const handler: Handlers<Post> = {
 };
 
 export default function PostPage(props: PageProps<Post>) {
+  const locale = "en-US";
+  const dateFmt = new Intl.DateTimeFormat(locale, { dateStyle: "full" });
   const post = props.data;
   const html = gfm.render(post.content);
   return (
     <div class="px-4 mx-auto max-w-screen-md">
       <p class="text-gray-600 mt-12">
-        {post.publishAt.toLocaleDateString()}
+        {dateFmt.format(post.publishAt)}
       </p>
       <h1 class="font-bold text-5xl mt-2">
         {post.title}
