@@ -25,7 +25,7 @@ export default function Home(props: PageProps<Post[]>) {
         alt="the fresh logo: a sliced lemon dripping with juice"
       />
       <p class="my-6">
-        Hello, worlds!
+        Hello there, worlds!
       </p>
       <Counter start={3} />
     </div>
