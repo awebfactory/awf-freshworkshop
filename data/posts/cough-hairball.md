@@ -13,12 +13,12 @@ snippet: on conveniently placed pants
 
 ### Table of local cat populations
 
-| Column 1     | on block | in neighborhood |
-| ------------ | -------- | --------------- |
-| Ragdoll Cats | 2        | 3               |
-| Ragdoll Cats | 5        | 6               |
-| Ragdoll Cats | 8        | 9               |
-| Ragdoll Cats | 8        | 9               |
+| Column 1           | on block | in neighborhood |
+| ------------------ | -------- | --------------- |
+| Ragdoll Cats       | 2        | 3               |
+| Persian Cats       | 5        | 6               |
+| Scotting Fold Cats | 8        | 9               |
+| Sphynx Cats        | 8        | 9               |
 
 ### Daily diary
 
